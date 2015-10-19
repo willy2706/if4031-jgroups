@@ -10,12 +10,11 @@ public class RpcDispatcherTest {
     JChannel channel;
     RpcDispatcher disp;
     RspList rsp_list;
-    String             props; // set by application
+    String props = "jgroups/src/main/resources/udp.xml";
 
     public static int print(int number) throws Exception {
         return number * 2;
     }
-
 
     public void start() throws Exception {
         MethodCall call=new MethodCall(getClass().getMethod("print", int.class));
